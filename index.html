@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshu Hospital | Harkhpur</title>
+  <meta name="description" content="Priyanshu Hospital in Harkhpur - compassionate healthcare, appointments and patient support.">
+  <style>
+:root{
+      --primary:#087f8c; --primary2:#0aa6a6; --dark:#12343b;
+      --light:#f4fbfc; --white:#fff; --text:#35535a; --accent:#e8f8f7;
+      --shadow:0 15px 40px rgba(18,52,59,.10); --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--dark);color:#fff;padding:9px 6%;display:flex;justify-content:space-between;gap:20px;font-size:14px}
+    .topbar a{color:#fff}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 3px 18px rgba(0,0,0,.06)}
+    nav{max-width:1200px;margin:auto;padding:15px 6%;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark);font-size:22px}
+    .logo-mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;display:grid;place-items:center;font-size:25px;font-weight:bold}
+    .logo span{color:var(--primary)}
+    .links{display:flex;gap:25px;align-items:center;font-weight:600}
+    .links a:hover{color:var(--primary)}
+    .menu{display:none;border:0;background:none;font-size:28px;color:var(--dark);cursor:pointer}
+    .btn{display:inline-block;padding:13px 22px;border-radius:12px;background:var(--primary);color:#fff;font-weight:700;border:0;cursor:pointer;transition:.25s}
+    .btn:hover{transform:translateY(-2px);background:#066d78}
+    .btn.light{background:#fff;color:var(--primary)}
+    .hero{background:linear-gradient(135deg,#e9fbfb 0%,#fff 55%,#eaf7ff 100%);padding:80px 6% 70px;overflow:hidden}
+    .hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;background:#d9f4f2;color:var(--primary);padding:7px 13px;border-radius:30px;font-weight:800;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.05;color:var(--dark);margin-bottom:20px}
+    h1 span{color:var(--primary)}
+    .hero p{font-size:18px;max-width:650px;margin-bottom:28px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+    .hero-card{min-height:420px;border-radius:35px;background:linear-gradient(160deg,#087f8c,#0aa6a6);position:relative;box-shadow:var(--shadow);padding:35px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:280px;height:280px;border:35px solid rgba(255,255,255,.12);border-radius:50%;top:-90px;right:-70px}
+    .hero-card:after{content:"✚";position:absolute;font-size:210px;color:rgba(255,255,255,.06);right:25px;top:60px}
+    .hero-info{position:relative;z-index:2;background:rgba(255,255,255,.13);padding:22px;border-radius:20px;width:100%;backdrop-filter:blur(5px)}
+    .hero-info h3{font-size:26px;margin-bottom:6px}
+    .quick{max-width:1100px;margin:-35px auto 0;position:relative;z-index:5;background:#fff;border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
+    .quick div{padding:22px 25px;border-right:1px solid #e8eeee}
+    .quick div:last-child{border:0}.quick b{display:block;color:var(--dark);margin-bottom:4px}
+    section{padding:80px 6%}.container{max-width:1200px;margin:auto}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .section-head h2{font-size:40px;color:var(--dark);margin-bottom:10px}
+    .section-head p{color:#637b80}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #e5eeee;border-radius:var(--radius);padding:28px;box-shadow:0 8px 25px rgba(18,52,59,.05);transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{width:56px;height:56px;border-radius:16px;background:var(--accent);display:grid;place-items:center;color:var(--primary);font-size:25px;margin-bottom:18px}
+    .card h3{color:var(--dark);margin-bottom:8px}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .about-visual{min-height:420px;border-radius:30px;background:linear-gradient(145deg,#0b7f89,#d8f7f5);display:grid;place-items:center;position:relative;overflow:hidden}
+    .cross{font-size:190px;color:rgba(255,255,255,.9);font-weight:800}
+    .badge{position:absolute;bottom:25px;left:25px;background:#fff;border-radius:18px;padding:18px 22px;box-shadow:var(--shadow);font-weight:700;color:var(--dark)}
+    .about h2{font-size:40px;color:var(--dark);margin-bottom:16px}
+    .checks{list-style:none;margin:25px 0;display:grid;gap:12px}
+    .checks li:before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#d9f4f2;color:var(--primary);margin-right:10px;font-weight:bold}
+    .appointment{background:linear-gradient(135deg,#12343b,#087f8c);color:#fff}
+    .appointment-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+    .appointment h2{font-size:40px;margin-bottom:15px}
+    .form{background:#fff;color:var(--text);padding:30px;border-radius:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .form .full{grid-column:1/-1}.form label{font-size:13px;font-weight:700;color:var(--dark);display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d7e5e7;border-radius:10px;outline:none;font:inherit}
+    input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(8,127,140,.10)}
+    textarea{min-height:95px;resize:vertical}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact-card{text-align:center;padding:28px;border:1px solid #e5eeee;border-radius:18px}
+    .contact-card h3{color:var(--dark);margin:8px 0}
+    footer{background:#0c292f;color:#cde0e2;padding:45px 6% 25px}
+    .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px}
+    footer h3{color:#fff;margin-bottom:12px} footer a:hover{color:#fff}
+    .copyright{max-width:1200px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;text-align:center}
+    .whatsapp{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:27px;z-index:60;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+    .notice{font-size:13px;margin-top:12px;opacity:.85}
+    @media(max-width:850px){
+      .topbar{font-size:12px}.links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 6%;flex-direction:column;box-shadow:0 10px 20px rgba(0,0,0,.08)}
+      .links.open{display:flex}.menu{display:block}.nav-btn{display:none}
+      .hero-inner,.about-grid,.appointment-grid{grid-template-columns:1fr}.hero{padding-top:55px}
+      .hero-card{min-height:300px}.quick{grid-template-columns:1fr;margin:20px 6% 0}.quick div{border-right:0;border-bottom:1px solid #e8eeee}
+      .grid,.contact-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .grid,.contact-grid,.form,.footer-grid{grid-template-columns:1fr}.form .full{grid-column:auto}
+      section{padding:60px 6%}.section-head h2,.about h2,.appointment h2{font-size:32px}
+      .hero-actions .btn{width:100%;text-align:center}
+    }
+  
+    /* Premium polish */
+    body{background:#f8fbfc}
+    .topbar{letter-spacing:.15px}
+    header{border-bottom:1px solid rgba(18,52,59,.06)}
+    .hero{min-height:650px;position:relative}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(10,166,166,.08);right:-180px;top:-180px}
+    .hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(8,127,140,.05);left:-160px;bottom:-150px}
+    .hero-inner,.quick,.container{position:relative;z-index:2}
+    .hero-card{border:1px solid rgba(255,255,255,.35);box-shadow:0 25px 70px rgba(8,127,140,.25)}
+    .hero-card .floating{position:absolute;z-index:3;background:#fff;color:var(--dark);padding:14px 18px;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,.13);font-weight:700}
+    .hero-card .f1{top:35px;left:28px}.hero-card .f2{top:105px;right:25px}.hero-card .f3{bottom:120px;left:25px}
+    .quick{margin-top:-48px}
+    .quick div{transition:.25s}.quick div:hover{background:#fbffff}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+    .stat{background:#fff;border:1px solid #e3eeee;border-radius:18px;padding:20px;text-align:center;box-shadow:0 8px 25px rgba(18,52,59,.05)}
+    .stat strong{display:block;font-size:30px;color:var(--primary);line-height:1.1}.stat span{font-size:13px}
+    .card{position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;background:rgba(10,166,166,.045);right:-28px;top:-28px}
+    .doctor{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;background:#fff;border:1px solid #e4eeee;border-radius:24px;padding:25px;box-shadow:0 10px 30px rgba(18,52,59,.06)}
+    .doctor-photo{height:150px;width:150px;border-radius:22px;background:linear-gradient(145deg,#dff7f5,#0a929d);display:grid;place-items:center;font-size:65px;color:#fff}
+    .doctor h3{color:var(--dark);font-size:25px}.role{color:var(--primary);font-weight:700;font-size:14px;margin-bottom:9px}
+    .testimonial{background:linear-gradient(145deg,#f0fbfb,#fff);border:1px solid #dceced;border-radius:24px;padding:30px;position:relative}
+    .testimonial .quote{font-size:45px;color:var(--primary);line-height:.8}.stars{color:#e4a51a;letter-spacing:2px;margin:8px 0}
+    .faq{display:grid;gap:12px;max-width:850px;margin:auto}.faq details{background:#fff;border:1px solid #e1ecee;border-radius:15px;padding:17px 20px}.faq summary{cursor:pointer;font-weight:700;color:var(--dark)}
+    .cta{margin-top:45px;border-radius:28px;padding:40px;background:linear-gradient(135deg,#087f8c,#12343b);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .cta h3{font-size:30px;margin-bottom:5px}
+    .reveal{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.doctor{grid-template-columns:1fr;text-align:center}.doctor-photo{margin:auto}.cta{flex-direction:column;text-align:center}}
+    @media(max-width:560px){.stats{grid-template-columns:1fr 1fr}.hero{min-height:auto}.hero-card .f2{right:10px}.hero-card .f3{left:10px}.cta h3{font-size:24px}}
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>Welcome to Priyanshu Hospital</span>
+    <a href="#">Call: +91 731 *** 7205</a>
+  </div>
+
+  <header>
+    <nav>
+      <a class="logo" href="#home"><div class="logo-mark">✚</div><div>Priyanshu <span>Hospital</span></div></a>
+      <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a>
+        <a href="#appointment">Appointment</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn nav-btn" href="#appointment">Book Appointment</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">COMPASSIONATE • TRUSTED • PATIENT-FIRST</span>
+          <h1>Healthcare with <span>care</span> at its heart.</h1>
+          <p>Welcome to Priyanshu Hospital, Harkhpur. A clean, welcoming place designed to make healthcare easier for patients and families.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#appointment">Book an Appointment</a>
+            <a class="btn light" href="#">Call Hospital</a>
+          </div>
+        </div>
+        <div class="hero-card reveal" aria-label="Priyanshu Hospital illustrative building image" style="background-image:linear-gradient(90deg,rgba(8,127,140,.08),rgba(8,127,140,.12)),url('hospital-hero.png');background-size:cover;background-position:center;min-height:460px">
+          <div class="floating f1">🩺 Patient First</div>
+          <div class="floating f2">✓ Trusted Care</div>
+          <div class="floating f3">❤️ Caring Team</div>
+          <div class="hero-info">
+            <h3>Priyanshu Hospital</h3>
+            <p>A modern hospital environment designed to feel welcoming, professional and caring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick">
+      <div><b>📞 Quick Contact</b><a href="#">+91 731 *** 7205</a></div>
+      <div><b>📍 Location</b>Harkhpur</div>
+      <div><b>🕐 Appointment</b>Call or submit the form</div>
+    </div>
+
+    <section style="padding-top:35px;padding-bottom:25px">
+      <div class="container stats">
+        <div class="stat"><strong>24/7</strong><span>Patient Support</span></div>
+        <div class="stat"><strong>6+</strong><span>Healthcare Services</span></div>
+        <div class="stat"><strong>100%</strong><span>Patient Focus</span></div>
+        <div class="stat"><strong>1</strong><span>Easy Appointment Form</span></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <p>Healthcare support presented simply, so patients can quickly find what they need.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="icon">🩺</div><h3>General Consultation</h3><p>Consultation and guidance for common health concerns and routine medical needs.</p></div>
+          <div class="card"><div class="icon">🚑</div><h3>Emergency Support</h3><p>For urgent medical situations, call the hospital directly before visiting.</p></div>
+          <div class="card"><div class="icon">💊</div><h3>Patient Care</h3><p>A patient-focused environment with clear communication and supportive care.</p></div>
+          <div class="card"><div class="icon">🧪</div><h3>Diagnostics</h3><p>Ask the hospital about available diagnostic and laboratory services.</p></div>
+          <div class="card"><div class="icon">❤️</div><h3>Health Guidance</h3><p>Helpful guidance for maintaining healthy habits and following medical advice.</p></div>
+          <div class="card"><div class="icon">👨‍👩‍👧</div><h3>Family Support</h3><p>A welcoming approach for patients and their families throughout the care journey.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual"><div class="cross">✚</div><div class="badge">Priyanshu Hospital<br><small>Harkhpur</small></div></div>
+        <div>
+          <span class="eyebrow">ABOUT THE HOSPITAL</span>
+          <h2>A welcoming place for better healthcare.</h2>
+          <p>Priyanshu Hospital is designed around a simple idea: patients should feel informed, respected and cared for. Our website makes it easy to contact the hospital and request an appointment.</p>
+          <ul class="checks">
+            <li>Patient-friendly experience</li>
+            <li>Easy appointment request</li>
+            <li>Direct phone & WhatsApp contact</li>
+            <li>Simple access to hospital information</li>
+          </ul>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">OUR CARE TEAM</span>
+          <h2>Professional care, personal attention.</h2>
+          <p>A clean presentation for your hospital team. Real doctor details can be added whenever you provide them.</p>
+        </div>
+        <div class="doctor">
+          <div class="doctor-photo">👨‍⚕️</div>
+          <div>
+            <div class="role">MEDICAL TEAM</div>
+            <h3>Priyanshu Hospital Care Team</h3>
+            <p>Dedicated to creating a respectful, comfortable and patient-friendly healthcare experience.</p>
+            <div style="margin-top:15px"><a class="btn" href="#appointment">Request Appointment</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--light)">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">PATIENT EXPERIENCE</span>
+          <h2>Designed around your comfort.</h2>
+        </div>
+        <div class="grid">
+          <div class="testimonial"><div class="quote">“</div><p>Clear communication and a welcoming environment can make every hospital visit feel easier.</p><div class="stars">★★★★★</div><strong>Patient-first approach</strong></div>
+          <div class="testimonial"><div class="quote">“</div><p>Simple appointment requests help patients connect with the hospital without unnecessary steps.</p><div class="stars">★★★★★</div><strong>Easy access to care</strong></div>
+          <div class="testimonial"><div class="quote">“</div><p>Professional presentation with direct contact options keeps important information close at hand.</p><div class="stars">★★★★★</div><strong>Family-friendly support</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment" id="appointment">
+      <div class="container appointment-grid">
+        <div>
+          <span class="eyebrow" style="background:rgba(255,255,255,.15);color:#fff">APPOINTMENT</span>
+          <h2>Request an appointment</h2>
+          <p>Fill in your details. When you submit the form, WhatsApp will open with your appointment request ready to send to the hospital number.</p>
+          <p class="notice">For emergencies, please contact appropriate emergency medical services immediately rather than relying on this form.</p>
+        </div>
+        <form class="form" id="appointmentForm">
+          <div><label>Patient Name *</label><input id="name" required placeholder="Enter your name"></div>
+          <div><label>Phone Number *</label><input id="phone" required type="tel" placeholder="Enter phone number"></div>
+          <div><label>Preferred Date</label><input id="date" type="date"></div>
+          <div><label>Preferred Time</label><input id="time" type="time"></div>
+          <div class="full"><label>Message / Reason for Visit</label><textarea id="message" placeholder="Tell us briefly how we can help"></textarea></div>
+          <div class="full"><button class="btn" type="submit" style="width:100%">Send Appointment Request on WhatsApp</button></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact Priyanshu Hospital</h2>
+          <p>Reach us directly for appointments and general enquiries.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><div class="icon" style="margin:0 auto">📞</div><h3>Phone</h3><a href="#">+91 731 *** 7205</a></div>
+          <div class="contact-card"><div class="icon" style="margin:0 auto">💬</div><h3>WhatsApp</h3><a href="#" target="_blank">Chat on WhatsApp</a></div>
+          <div class="contact-card"><div class="icon" style="margin:0 auto">📍</div><h3>Address</h3><p>Harkhpur</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details><summary>How can I request an appointment?</summary><p style="margin-top:10px">Use the appointment form on this website and send the request through WhatsApp.</p></details>
+          <details><summary>How can I contact the hospital?</summary><p style="margin-top:10px">Use the phone or WhatsApp options shown on the website.</p></details>
+          <details><summary>Where is Priyanshu Hospital located?</summary><p style="margin-top:10px">The hospital is listed in Harkhpur. Add the complete address and map when available.</p></details>
+        </div>
+        <div class="cta">
+          <div><h3>Need an appointment?</h3><p>Connect with Priyanshu Hospital today.</p></div>
+          <a class="btn light" href="#appointment">Book Appointment →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div><h3>Priyanshu Hospital</h3><p>Compassionate healthcare and a patient-first experience in Harkhpur.</p></div>
+      <div><h3>Quick Links</h3><p><a href="#services">Services</a></p><p><a href="#about">About</a></p><p><a href="#appointment">Appointment</a></p></div>
+      <div><h3>Contact</h3><p><a href="#">+91 731 *** 7205</a></p><p>Harkhpur</p></div>
+    </div>
+    <div class="copyright">© 2026 Priyanshu Hospital. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp" href="#" target="_blank" aria-label="WhatsApp">✆</a>
+  <script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+    document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+    document.getElementById('appointmentForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const date=document.getElementById('date').value || 'Not specified';
+      const time=document.getElementById('time').value || 'Not specified';
+      const message=document.getElementById('message').value.trim() || 'No additional message';
+      const text=`Hello Priyanshu Hospital, I would like to request an appointment.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}%0AReason/Message: ${encodeURIComponent(message)}`;
+      window.open(`#?text=${text}`,'_blank');
+    });
+
+  </script>
+</body>
+</html>
